@@ -1,0 +1,7 @@
+Question 1 : Y a-t-il des incohérences - doublon de numéro d'assiette ; nombre d'assiettes incohérent ?
+    Pas d'incohérences au niveau des assiettes même si ordre pas chronologique, cela est du au thread.
+    On a pas de doublons au niveau des assiettes car la méthode de compteur de l'assiette est "synchronized".
+    Ce qui signifie que 2 thread ne peuvent pas avoir la même incrémentation.
+
+Question 2 : Expliquer pourquoi le thread représentant l'essuyeur ne peut prendre d'assiette dans la pile.
+    On accède jamais à la pile d'assiettes car celle-ci n'est pas synchronized.
